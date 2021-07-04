@@ -170,7 +170,7 @@ end subroutine EvalAmp_VHiggs
       gVpVpS2 = czero
 
       gFFZ = ci*2d0*dsqrt(couplZffsq) ! = sqrt(gwsq/(1.0_dp-xw))
-      gFFA = -ci*dsqrt(couplAffsq) ! = sqrt(gwsq*xw)
+      gFFA = ci*dsqrt(couplAffsq) ! = sqrt(gwsq*xw)
       gFFW = ci*dsqrt(couplWffsq) ! = sqrt(gwsq/2.0_dp)
 
       qq = -scr(MomExt(:,3),MomExt(:,4))

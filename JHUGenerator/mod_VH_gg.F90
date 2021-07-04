@@ -86,7 +86,7 @@ subroutine amp_VH_gg(Mom,mass,helicity,id,VHmode,amp)
 
 ! SM couplings for fermion currents
   gFFZ = ci*dsqrt(couplZffsq) ! = i * sqrt[ gwsq/4d0/(1.0_dp-xw) ]
-  gZAFF = ci*couplAZff ! = (loop > Z) * (A > ff) (minus from A > ff included)
+  gZAFF = ci*couplAZff ! = (loop > Z) * (A > ff) 
 
   q3_q4 = -scr(Mom(:,3),Mom(:,4))
   q3_q3 = scr(Mom(:,3),Mom(:,3))

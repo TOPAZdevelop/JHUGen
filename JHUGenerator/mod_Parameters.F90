@@ -1048,8 +1048,8 @@ real(8), public, parameter :: QdR = -1d0/3d0
 !   bL = dsqrt(2)*cw
 ! for V = W-boson,
 ! and
-!   cR = -2*sw*cw*Q(f)
-!   cL = -2*sw*cw*Q(f)
+!   cR = +2*sw*cw*Q(f)
+!   cL = +2*sw*cw*Q(f)
 ! for V = photon*
 !
 real(8), public            :: overallCouplVffsq ! Overall coupling squared that goes along with the ones below
@@ -1063,14 +1063,14 @@ real(8), public            :: aR_QDn ! = -2d0*sitW**2*(-1d0/3d0)
 real(8), public            :: aL_QDn ! = -2d0*sitW**2*(-1d0/3d0)-1d0
 real(8), public            :: bL ! = dsqrt(2d0)*dsqrt(1d0-sitW**2)
 real(8), public            :: bR ! = 0d0
-real(8), public            :: cR_lep ! = -2d0*sitW*dsqrt(1d0-sitW**2)*(-1d0)
-real(8), public            :: cL_lep ! = -2d0*sitW*dsqrt(1d0-sitW**2)*(-1d0)
-real(8), public            :: cR_neu ! = -2d0*sitW*dsqrt(1d0-sitW**2)*(0d0)
-real(8), public            :: cL_neu ! = -2d0*sitW*dsqrt(1d0-sitW**2)*(0d0)
-real(8), public            :: cR_QUp ! = -2d0*sitW*dsqrt(1d0-sitW**2)*(2d0/3d0)
-real(8), public            :: cL_QUp ! = -2d0*sitW*dsqrt(1d0-sitW**2)*(2d0/3d0)
-real(8), public            :: cR_QDn ! = -2d0*sitW*dsqrt(1d0-sitW**2)*(-1d0/3d0)
-real(8), public            :: cL_QDn ! = -2d0*sitW*dsqrt(1d0-sitW**2)*(-1d0/3d0)
+real(8), public            :: cR_lep ! = +2d0*sitW*dsqrt(1d0-sitW**2)*(-1d0)
+real(8), public            :: cL_lep ! = +2d0*sitW*dsqrt(1d0-sitW**2)*(-1d0)
+real(8), public            :: cR_neu ! = +2d0*sitW*dsqrt(1d0-sitW**2)*(0d0)
+real(8), public            :: cL_neu ! = +2d0*sitW*dsqrt(1d0-sitW**2)*(0d0)
+real(8), public            :: cR_QUp ! = +2d0*sitW*dsqrt(1d0-sitW**2)*(2d0/3d0)
+real(8), public            :: cL_QUp ! = +2d0*sitW*dsqrt(1d0-sitW**2)*(2d0/3d0)
+real(8), public            :: cR_QDn ! = +2d0*sitW*dsqrt(1d0-sitW**2)*(-1d0/3d0)
+real(8), public            :: cL_QDn ! = +2d0*sitW*dsqrt(1d0-sitW**2)*(-1d0/3d0)
 
 ! Coupling normalizations based on the common factor to be gwsq
 real(dp), public           :: couplWffsq
@@ -2814,20 +2814,20 @@ implicit none
    bL = sqrt(2d0*(1d0-xw))
    bR = 0d0
    ! A couplings
-   cR_lep = -twosc*QlR
-   cL_lep = -twosc*QlL
-   cR_neu = -twosc*QnR
-   cL_neu = -twosc*QnL
-   cR_QUp = -twosc*QuR
-   cL_QUp = -twosc*QuL
-   cR_QDn = -twosc*QdR
-   cL_QDn = -twosc*QdL
+   cR_lep = +twosc*QlR
+   cL_lep = +twosc*QlL
+   cR_neu = +twosc*QnR
+   cL_neu = +twosc*QnL
+   cR_QUp = +twosc*QuR
+   cL_QUp = +twosc*QuL
+   cR_QDn = +twosc*QdR
+   cL_QDn = +twosc*QdL
 
    ! Normalizations used in VH and VBF
    couplWffsq = gwsq/2.0_dp
    couplZffsq = gwsq/4.0_dp/(1.0_dp-xw)
    !couplZffsq = alpha_QED*4d0*pi/xw/4.0_dp/(1.0_dp-xw)
-   couplAZff = -gwsq*sitW/2.0_dp/sqrt(1.0_dp-xw)
+   couplAZff = +gwsq*sitW/2.0_dp/sqrt(1.0_dp-xw)
    couplAffsq = gwsq*xw
 
 
