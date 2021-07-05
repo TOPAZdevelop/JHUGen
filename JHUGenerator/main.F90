@@ -1407,6 +1407,8 @@ type(SaveValues) :: tosave, oldsavevalues
     endif
 
     if( IsAZDecay(DecayMode1) .or. ((Process.eq.50 .or. Process.eq.51).and.IsAPhoton(DecayMode1)) ) then
+       M_V = M_Z
+       Ga_V= Ga_Z
        M_Vprime = M_Zprime
        Ga_Vprime = Ga_Zprime
     elseif( IsAWDecay(DecayMode1) ) then
