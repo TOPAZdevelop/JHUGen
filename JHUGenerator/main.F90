@@ -1407,11 +1407,6 @@ type(SaveValues) :: tosave, oldsavevalues
     endif
 
     if( IsAZDecay(DecayMode1) .or. ((Process.eq.50 .or. Process.eq.51).and.IsAPhoton(DecayMode1)) ) then
-    print *, "WARNING!!!"
-       M_V = 1.0*GeV  !M_Z
-       Ga_V= 0.1*GeV  !Ga_Z 
-       print *, "WARNING!!! setting M_V --> 1 GeV for debugging!!! "
-       print *, "WARNING!!!"
        M_Vprime = M_Zprime
        Ga_Vprime = Ga_Zprime
     elseif( IsAWDecay(DecayMode1) ) then
